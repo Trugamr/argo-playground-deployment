@@ -2,7 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: playground
+  namespace: production
+  labels:
+    app: playground
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: playground
